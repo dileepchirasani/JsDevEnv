@@ -10,6 +10,7 @@
     "url": "git+https://github.com/dileepchirasani/JsDevEnv"
   },
   "dependencies": {
+    "express": "^4.15.4",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
@@ -27,7 +28,6 @@
     "eslint": "3.8.1",
     "eslint-plugin-import": "2.0.1",
     "eslint-watch": "2.1.14",
-    "express": "4.14.0",
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.22.0",
     "jsdom": "9.8.0",
