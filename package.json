@@ -6,8 +6,10 @@
 
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src",
-    "open:src":"babel-node buildScripts/srcServer.js security-check",
-    "security-check":"nsp check"
+    "open:src":"babel-node buildScripts/srcServer.js security-check lint-watch",
+    "security-check":"nsp check",
+    "lint":"esw webpack.config.* src buildScripts --color",
+    "lint-watch":"npm run lint -- --watch"
   },
   "author": "Dileep Chirasani",
   "license": "UNLICENSED",
