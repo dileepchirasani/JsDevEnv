@@ -15,6 +15,15 @@ app.use(require('webpack-dev-middleware')(compiler,{
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname,'../src/index.html'));
 });
+
+app.get('/users',function(req,res){
+  res.json([
+    {"id":1,"firstName":"No","lastName":"One","email":"noone@gmail.com"},
+    {"id":2,"firstName":"Some","lastName":"One","email":"someone@gmail.com"},
+    {"id":3,"firstName":"That","lastName":"One","email":"thatone@gmail.com"}
+
+  ]);
+});
 app.listen(port, function(err){
   if(err){
     console.log(err);
