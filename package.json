@@ -2,7 +2,13 @@
   "name": "js-dev-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment",
-  "scripts": {},
+  "scripts": {
+
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src":"babel-node buildScripts/srcServer.js security-check",
+    "security-check":"nsp check"
+  },
   "author": "Dileep Chirasani",
   "license": "UNLICENSED",
   "repository": {
